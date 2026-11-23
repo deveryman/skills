@@ -1,9 +1,10 @@
 ---
 name: claude-api
 description: |-
-  Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.
-  TRIGGER — read BEFORE opening the target file; don't skip because it "looks like a one-liner" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens).
-  SKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named — don't Read the file).
+description: >-
+  Reference for Claude API and Anthropic SDK: models, pricing, parameters, streaming, tools, MCP, agents, caching, token counting, migration, and implementation.
+  Read before inspecting target files when a request mentions Claude/Anthropic (including Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, or `[1m]`); asks about LLM models, pricing, limits, or caching; or involves provider-unspecified LLM work (agents, MCP, tool definitions, multi-agent, RAG, LLM judges, computer use, natural-language generation or transformation, or debugging refusals, cutoffs, streaming, tool calls, or tokens). For model, pricing, limits, or caching questions, do not answer from memory.
+  Skip only if another provider is named in the query, or, when none is named, a project-wide grep for `openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama` finds a match. Run that grep before reading the target file.
 license: Complete terms in LICENSE.txt
 ---
 
